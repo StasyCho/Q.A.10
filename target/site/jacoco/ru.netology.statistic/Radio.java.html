@@ -1,78 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Radio.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Q.A.10</a> &gt; <a href="index.source.html" class="el_package">ru.netology.statistic</a> &gt; <span class="el_source">Radio.java</span></div><h1>Radio.java</h1><pre class="source lang-java linenums">package ru.netology.statistic;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+<span class="fc" id="L7">@NoArgsConstructor</span>
+<span class="nc" id="L8">@AllArgsConstructor</span>
+<span class="pc bnc" id="L9" title="All 20 branches missed.">@Data</span>
+
 public class Radio {
 
-    public int maxNumber;
-<span class="fc" id="L6">    public int minNumber = 0;</span>
-    public int radioStationNumber;
-    public int sumRadioStation;
+<span class="nc" id="L13">    public int maxNumber;</span>
+<span class="pc" id="L14">    public int minNumber = 0;</span>
+<span class="fc" id="L15">    public int radioStationNumber;</span>
+<span class="nc" id="L16">    public int sumRadioStation;</span>
+<span class="pc" id="L17">    public int maxVolume = 100;</span>
+<span class="pc" id="L18">    public int minVolume = 0;</span>
+<span class="pc" id="L19">    public int soundVolume = minVolume;</span>
 
 
-<span class="fc" id="L11">    public Radio (int sumRadioStation) {</span>
-<span class="fc" id="L12">        this.sumRadioStation = sumRadioStation;</span>
-<span class="fc" id="L13">        this.maxNumber = sumRadioStation - 1;</span>
-<span class="fc" id="L14">    }</span>
-<span class="fc" id="L15">    public Radio () {</span>
-<span class="fc" id="L16">        this.sumRadioStation = 10;</span>
-<span class="fc" id="L17">        this.maxNumber = 9;</span>
-<span class="fc" id="L18">    }</span>
-    public int getRadioStationNumber() {
-<span class="fc" id="L20">        return radioStationNumber;</span>
-    }
-    public void setRadioStationNumber(int newRadioStationNumber) {
-<span class="fc bfc" id="L23" title="All 2 branches covered.">        if (newRadioStationNumber &lt; minNumber) {</span>
-<span class="fc" id="L24">            return;</span>
-        }
-<span class="fc bfc" id="L26" title="All 2 branches covered.">        if (newRadioStationNumber &gt; maxNumber) {</span>
-<span class="fc" id="L27">            return;</span>
-        }
-<span class="fc" id="L29">        radioStationNumber = newRadioStationNumber;</span>
-<span class="fc" id="L30">    }</span>
 
-    public int getMaxNumber() {
-<span class="fc" id="L33">        return maxNumber;</span>
-    }
 
-    public void nextNumber(int nextRadioStationNumber) {
-<span class="fc bfc" id="L37" title="All 2 branches covered.">        if (nextRadioStationNumber == sumRadioStation) {</span>
-<span class="fc" id="L38">            radioStationNumber = minNumber;</span>
-        }
-<span class="fc bfc" id="L40" title="All 2 branches covered.">        if (nextRadioStationNumber &lt; sumRadioStation) {</span>
-<span class="fc" id="L41">            radioStationNumber = nextRadioStationNumber + 1;</span>
-        }
-<span class="fc" id="L43">    }</span>
-    public void prevNumber(int prevRadioStationNumber) {
-<span class="fc bfc" id="L45" title="All 2 branches covered.">        if (prevRadioStationNumber == minNumber) {</span>
-<span class="fc" id="L46">            radioStationNumber = maxNumber;</span>
-        }
-<span class="fc bfc" id="L48" title="All 2 branches covered.">        if (prevRadioStationNumber &gt; minNumber) {</span>
-<span class="fc" id="L49">            radioStationNumber = prevRadioStationNumber - 1;</span>
-        }
-<span class="fc" id="L51">    }</span>
-<span class="fc" id="L52">    public int maxVolume = 100;</span>
-<span class="fc" id="L53">    public int minVolume = 0;</span>
-<span class="fc" id="L54">    public int soundVolume = minVolume;</span>
 
-    public int getSoundVolume() {
-<span class="fc" id="L57">        return soundVolume;</span>
-    }
-
-    public void setSoundVolume(int newSoundVolume) {
-<span class="fc bfc" id="L61" title="All 2 branches covered.">        if (newSoundVolume &lt; minVolume) {</span>
-<span class="fc" id="L62">            return;</span>
-        }
-<span class="fc bfc" id="L64" title="All 2 branches covered.">        if (newSoundVolume &gt; maxVolume) {</span>
-<span class="fc" id="L65">            return;</span>
-        }
-<span class="fc" id="L67">        soundVolume = newSoundVolume;</span>
-<span class="fc" id="L68">    }</span>
-    public void increaseVolume1() {
-<span class="fc" id="L70">        int target = soundVolume + 1;</span>
-<span class="fc" id="L71">        setSoundVolume(target);</span>
-<span class="fc" id="L72">    }</span>
-    public void decreaseVolume1() {
-<span class="fc" id="L74">        int target = soundVolume - 1;</span>
-<span class="fc" id="L75">        setSoundVolume(target);</span>
-<span class="fc" id="L76">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
