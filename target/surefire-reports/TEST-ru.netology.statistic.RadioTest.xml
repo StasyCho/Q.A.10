@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ru.netology.statistic.RadioTest" time="0.082" tests="20" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ru.netology.statistic.RadioTest" time="0.073" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.specification.version" value="11"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1251"/>
-    <property name="java.class.path" value="C:\Users\Family.LAPTOP-ALSVABN0\IdeaProjects\Q.A.10\target\test-classes;C:\Users\Family.LAPTOP-ALSVABN0\IdeaProjects\Q.A.10\target\classes;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\jupiter\junit-jupiter\5.7.0\junit-jupiter-5.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.7.0\junit-jupiter-params-5.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;"/>
+    <property name="java.class.path" value="C:\Users\Family.LAPTOP-ALSVABN0\IdeaProjects\Q.A.10\target\test-classes;C:\Users\Family.LAPTOP-ALSVABN0\IdeaProjects\Q.A.10\target\classes;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\jupiter\junit-jupiter\5.7.0\junit-jupiter-5.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.7.0\junit-jupiter-params-5.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\projectlombok\lombok\1.18.24\lombok-1.18.24.jar;"/>
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -17,9 +17,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-11.0.16.8-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\FAMILY~1.LAP\AppData\Local\Temp\surefire3326136209768543296\surefirebooter8469440939136557228.jar C:\Users\Family.LAPTOP-ALSVABN0\AppData\Local\Temp\surefire3326136209768543296 2022-11-07T23-15-09_782-jvmRun1 surefire12880241085549427334tmp surefire_016150817664596671272tmp"/>
+    <property name="sun.java.command" value="C:\Users\FAMILY~1.LAP\AppData\Local\Temp\surefire1582278294047299957\surefirebooter4003252990766131843.jar C:\Users\Family.LAPTOP-ALSVABN0\AppData\Local\Temp\surefire1582278294047299957 2022-11-10T22-38-24_035-jvmRun1 surefire12029414515552270310tmp surefire_04876872263863986929tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\Family.LAPTOP-ALSVABN0\IdeaProjects\Q.A.10\target\test-classes;C:\Users\Family.LAPTOP-ALSVABN0\IdeaProjects\Q.A.10\target\classes;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\jupiter\junit-jupiter\5.7.0\junit-jupiter-5.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.7.0\junit-jupiter-params-5.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\Family.LAPTOP-ALSVABN0\IdeaProjects\Q.A.10\target\test-classes;C:\Users\Family.LAPTOP-ALSVABN0\IdeaProjects\Q.A.10\target\classes;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\jupiter\junit-jupiter\5.7.0\junit-jupiter-5.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.7.0\junit-jupiter-params-5.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\Family.LAPTOP-ALSVABN0\.m2\repository\org\projectlombok\lombok\1.18.24\lombok-1.18.24.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Family.LAPTOP-ALSVABN0"/>
     <property name="user.language" value="ru"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\FAMILY~1.LAP\AppData\Local\Temp\surefire3326136209768543296\surefirebooter8469440939136557228.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\FAMILY~1.LAP\AppData\Local\Temp\surefire1582278294047299957\surefirebooter4003252990766131843.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.16+8"/>
@@ -61,24 +61,12 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="shouldSetSoundVolume" classname="ru.netology.statistic.RadioTest" time="0.047"/>
-  <testcase name="shouldNotDecreaseVolume1" classname="ru.netology.statistic.RadioTest" time="0"/>
-  <testcase name="shouldIncreaseVolume1" classname="ru.netology.statistic.RadioTest" time="0.001"/>
-  <testcase name="invalidLowerBoundaryRadioStationNumber" classname="ru.netology.statistic.RadioTest" time="0.001"/>
-  <testcase name="invalidLowerBoundarySoundVolume" classname="ru.netology.statistic.RadioTest" time="0.001"/>
+  <testcase name="shouldSetSoundVolume" classname="ru.netology.statistic.RadioTest" time="0.05"/>
   <testcase name="ValidLowerBoundaryRadioStationNumber" classname="ru.netology.statistic.RadioTest" time="0.001"/>
-  <testcase name="shouldNextNumber0" classname="ru.netology.statistic.RadioTest" time="0.001"/>
   <testcase name="validLowerBoundarySoundVolume" classname="ru.netology.statistic.RadioTest" time="0.001"/>
-  <testcase name="shouldSetRadioStationNumber" classname="ru.netology.statistic.RadioTest" time="0"/>
-  <testcase name="shouldDecreaseVolume1" classname="ru.netology.statistic.RadioTest" time="0.001"/>
+  <testcase name="shouldSetRadioStationNumber" classname="ru.netology.statistic.RadioTest" time="0.002"/>
   <testcase name="validUpperBoundaryRadioStationNumber" classname="ru.netology.statistic.RadioTest" time="0.001"/>
   <testcase name="validBoundarySoundVolume" classname="ru.netology.statistic.RadioTest" time="0.001"/>
-  <testcase name="invalidUpperBoundarySetRadioStationNumber" classname="ru.netology.statistic.RadioTest" time="0.001"/>
-  <testcase name="invalidUpperBoundarySoundVolume" classname="ru.netology.statistic.RadioTest" time="0.001"/>
-  <testcase name="shouldPrevNumber9" classname="ru.netology.statistic.RadioTest" time="0.001"/>
-  <testcase name="shouldNextNumber" classname="ru.netology.statistic.RadioTest" time="0.001"/>
-  <testcase name="shouldNotIncreaseVolume1" classname="ru.netology.statistic.RadioTest" time="0.001"/>
-  <testcase name="validUpperBoundarySoundVolume" classname="ru.netology.statistic.RadioTest" time="0.001"/>
-  <testcase name="shouldPrevNumber" classname="ru.netology.statistic.RadioTest" time="0.001"/>
-  <testcase name="validBoundaryRadioStationNumber" classname="ru.netology.statistic.RadioTest" time="0.001"/>
+  <testcase name="validUpperBoundarySoundVolume" classname="ru.netology.statistic.RadioTest" time="0.002"/>
+  <testcase name="validBoundaryRadioStationNumber" classname="ru.netology.statistic.RadioTest" time="0.002"/>
 </testsuite>

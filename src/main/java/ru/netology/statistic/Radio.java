@@ -1,60 +1,25 @@
 package ru.netology.statistic;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+
 public class Radio {
+
+    public int maxNumber;
+    public int minNumber = 0;
     public int radioStationNumber;
-    public int soundVolume;
+    public int sumRadioStation;
+    public int maxVolume = 100;
+    public int minVolume = 0;
+    public int soundVolume = minVolume;
 
-    public int getRadioStationNumber() {
-        return radioStationNumber;
-    }
 
-    public void setRadioStationNumber(int newRadioStationNumber) {
-        if (newRadioStationNumber < 0) {
-            return;
-        }
-        if (newRadioStationNumber > 9) {
-            return;
-        }
-        radioStationNumber = newRadioStationNumber;
-    }
 
-    public void nextNumber (int nextRadioStationNumber) {
-        if (nextRadioStationNumber == 9) {
-            radioStationNumber = 0;
-        }
-        if (nextRadioStationNumber < 9) {
-            radioStationNumber = nextRadioStationNumber + 1;
-        }
-    }
-    public void prevNumber (int prevRadioStationNumber) {
-        if (prevRadioStationNumber == 0) {
-            radioStationNumber = 9;
-        }
-        if (prevRadioStationNumber > 0) {
-            radioStationNumber = prevRadioStationNumber - 1;
-        }
-    }
-    public int getSoundVolume() {
-        return soundVolume;
-    }
 
-    public void setSoundVolume(int newSoundVolume) {
-        if (newSoundVolume < 0) {
-            return;
-        }
-        if (newSoundVolume > 10) {
-            return;
-        }
-        soundVolume = newSoundVolume;
-    }
 
-    public void increaseVolume1 () {
-        int target = soundVolume + 1;
-        setSoundVolume(target);
-    }
-
-    public void decreaseVolume1 () {
-        int target = soundVolume - 1;
-        setSoundVolume(target);
-    }
 }
