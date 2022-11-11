@@ -1,8 +1,8 @@
 package ru.netology.statistic;
 
 public class Radio {
-    public int radioStationNumber;
-    public int soundVolume;
+    private int radioStationNumber;
+    private int soundVolume;
 
     public int getRadioStationNumber() {
         return radioStationNumber;
@@ -18,7 +18,7 @@ public class Radio {
         radioStationNumber = newRadioStationNumber;
     }
 
-    public void nextNumber (int nextRadioStationNumber) {
+    public void nextNumber(int nextRadioStationNumber) {
         if (nextRadioStationNumber == 9) {
             radioStationNumber = 0;
         }
@@ -26,7 +26,8 @@ public class Radio {
             radioStationNumber = nextRadioStationNumber + 1;
         }
     }
-    public void prevNumber (int prevRadioStationNumber) {
+
+    public void prevNumber(int prevRadioStationNumber) {
         if (prevRadioStationNumber == 0) {
             radioStationNumber = 9;
         }
@@ -34,6 +35,7 @@ public class Radio {
             radioStationNumber = prevRadioStationNumber - 1;
         }
     }
+
     public int getSoundVolume() {
         return soundVolume;
     }
@@ -48,12 +50,12 @@ public class Radio {
         soundVolume = newSoundVolume;
     }
 
-    public void increaseVolume1 () {
+    public void increaseVolume1() {
         int target = soundVolume + 1;
         setSoundVolume(target);
     }
 
-    public void decreaseVolume1 () {
+    public void decreaseVolume1() {
         int target = soundVolume - 1;
         setSoundVolume(target);
     }
