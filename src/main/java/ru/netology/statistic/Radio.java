@@ -18,21 +18,21 @@ public class Radio {
         radioStationNumber = newRadioStationNumber;
     }
 
-    public void nextNumber(int nextRadioStationNumber) {
-        if (nextRadioStationNumber == 9) {
-            radioStationNumber = 0;
-        }
-        if (nextRadioStationNumber < 9) {
-            radioStationNumber = nextRadioStationNumber + 1;
+    public void nextNumber() {
+        int number = radioStationNumber + 1;
+        if (radioStationNumber == 9) {
+            setRadioStationNumber(0);
+        } else {
+            setRadioStationNumber(number);
         }
     }
 
-    public void prevNumber(int prevRadioStationNumber) {
-        if (prevRadioStationNumber == 0) {
-            radioStationNumber = 9;
-        }
-        if (prevRadioStationNumber > 0) {
-            radioStationNumber = prevRadioStationNumber - 1;
+    public void prevNumber() {
+        int number = radioStationNumber - 1;
+        if (radioStationNumber == 0) {
+            setRadioStationNumber(9);
+        } else {
+            setRadioStationNumber(number);
         }
     }
 

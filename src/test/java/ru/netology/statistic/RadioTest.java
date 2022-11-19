@@ -79,9 +79,11 @@ public class RadioTest {
     public void shouldNextNumber0 () {
         Radio rad = new Radio();
 
-        rad.nextNumber(9);
+        rad.setRadioStationNumber(9);
 
-        int expected = 0;
+        rad.nextNumber();
+
+        int expected = 9;
         int actual = rad.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
@@ -90,9 +92,11 @@ public class RadioTest {
     public void shouldNextNumber () {
         Radio rad = new Radio();
 
-        rad.nextNumber(0);
+        rad.setRadioStationNumber(8);
 
-        int expected = 1;
+        rad.nextNumber();
+
+        int expected = 9;
         int actual = rad.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
@@ -101,7 +105,9 @@ public class RadioTest {
     public void shouldPrevNumber () {
         Radio rad = new Radio();
 
-        rad.prevNumber(9);
+        rad.setRadioStationNumber(9);
+
+        rad.prevNumber();
 
         int expected = 8;
         int actual = rad.getRadioStationNumber();
@@ -113,7 +119,9 @@ public class RadioTest {
     public void shouldPrevNumber9 () {
         Radio rad = new Radio();
 
-        rad.prevNumber(0);
+        rad.setRadioStationNumber(0);
+
+        rad.prevNumber();
 
         int expected = 9;
         int actual = rad.getRadioStationNumber();
