@@ -83,7 +83,7 @@ public class RadioTest {
 
         rad.nextNumber();
 
-        int expected = 9;
+        int expected = 0;
         int actual = rad.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
