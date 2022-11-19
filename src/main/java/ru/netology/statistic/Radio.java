@@ -2,11 +2,13 @@ package ru.netology.statistic;
 
 public class Radio {
 
-    public int maxNumber;
-    public int minNumber = 0;
-    public int radioStationNumber;
-    public int sumRadioStation;
-
+    private int maxNumber;
+    private int minNumber = 0;
+    private int radioStationNumber = minNumber;
+    private int sumRadioStation;
+    private int maxVolume = 100;
+    private int minVolume = 0;
+    private int soundVolume = minVolume;
 
     public Radio (int sumRadioStation) {
         this.sumRadioStation = sumRadioStation;
@@ -19,6 +21,16 @@ public class Radio {
     public int getRadioStationNumber() {
         return radioStationNumber;
     }
+    public int getMaxNumber() {
+        return maxNumber;
+    }
+    public int getMinNumber() {
+        return minNumber;
+    }
+    public int getSoundVolume() {
+        return soundVolume;
+    }
+
     public void setRadioStationNumber(int newRadioStationNumber) {
         if (newRadioStationNumber < minNumber) {
             return;
@@ -28,35 +40,6 @@ public class Radio {
         }
         radioStationNumber = newRadioStationNumber;
     }
-
-    public int getMaxNumber() {
-        return maxNumber;
-    }
-
-    public void nextNumber(int nextRadioStationNumber) {
-        if (nextRadioStationNumber == sumRadioStation) {
-            radioStationNumber = minNumber;
-        }
-        if (nextRadioStationNumber < sumRadioStation) {
-            radioStationNumber = nextRadioStationNumber + 1;
-        }
-    }
-    public void prevNumber(int prevRadioStationNumber) {
-        if (prevRadioStationNumber == minNumber) {
-            radioStationNumber = maxNumber;
-        }
-        if (prevRadioStationNumber > minNumber) {
-            radioStationNumber = prevRadioStationNumber - 1;
-        }
-    }
-    public int maxVolume = 100;
-    public int minVolume = 0;
-    public int soundVolume = minVolume;
-
-    public int getSoundVolume() {
-        return soundVolume;
-    }
-
     public void setSoundVolume(int newSoundVolume) {
         if (newSoundVolume < minVolume) {
             return;
@@ -65,6 +48,22 @@ public class Radio {
             return;
         }
         soundVolume = newSoundVolume;
+    }
+    public void nextNumber() {
+        int number = radioStationNumber + 1;
+        if (radioStationNumber == maxNumber) {
+            setRadioStationNumber(minNumber);
+        } else {
+            setRadioStationNumber(number);
+        }
+    }
+    public void prevNumber() {
+        int number = radioStationNumber - 1;
+        if (radioStationNumber == minNumber) {
+            setRadioStationNumber(maxNumber);
+        } else {
+            setRadioStationNumber(number);
+        }
     }
     public void increaseVolume1() {
         int target = soundVolume + 1;

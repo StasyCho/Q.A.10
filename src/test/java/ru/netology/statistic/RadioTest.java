@@ -22,7 +22,7 @@ public class RadioTest {
 
         rad.setRadioStationNumber(0);
 
-        int expected = rad.minNumber;
+        int expected = rad.getMinNumber();
         int actual = rad.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
@@ -74,11 +74,6 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
-
-
-
-
-
     @Test
     public void invalidLowerBoundaryRadioStationNumber30 () {
         Radio rad = new Radio(30);
@@ -154,7 +149,9 @@ public class RadioTest {
     public void shouldNextNumber0 () {
         Radio rad = new Radio();
 
-        rad.nextNumber(10);
+        rad.setRadioStationNumber(rad.getMaxNumber());
+
+        rad.nextNumber();
 
         int expected = 0;
         int actual = rad.getRadioStationNumber();
@@ -165,7 +162,9 @@ public class RadioTest {
     public void shouldNextNumber () {
         Radio rad = new Radio();
 
-        rad.nextNumber(0);
+        rad.setRadioStationNumber(rad.getMinNumber());
+
+        rad.nextNumber();
 
         int expected = 1;
         int actual = rad.getRadioStationNumber();
@@ -173,34 +172,27 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
     @Test
-    public void shouldNextNumber60 () {
+    public void shouldNextNumberZero () {
         Radio rad = new Radio(60);
 
-        rad.nextNumber(50);
+        rad.setRadioStationNumber(rad.getMaxNumber());
 
-        int expected = 51;
+        rad.nextNumber();
+
+        int expected = 0;
         int actual = rad.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
     }
-   // @Test
-   // public void shouldNextNumber60 () {
-   //     Radio rad = new Radio(60);
-
-    //    rad.nextNumber(60);
-
-     //   int expected = rad.getMinNumber();
-     //   int actual = rad.getRadioStationNumber();
-
-     //   Assertions.assertEquals(expected, actual);
-   // }
     @Test
     public void shouldPrevNumber () {
         Radio rad = new Radio();
 
-        rad.prevNumber(10);
+        rad.setRadioStationNumber(rad.getMaxNumber());
 
-        int expected = 9;
+        rad.prevNumber();
+
+        int expected = 8;
         int actual = rad.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
@@ -210,9 +202,11 @@ public class RadioTest {
     public void shouldPrevNumber9 () {
         Radio rad = new Radio();
 
-        rad.prevNumber(0);
+        rad.setRadioStationNumber(rad.getMinNumber());
 
-        int expected = 9;
+        rad.prevNumber();
+
+        int expected = rad.getMaxNumber();
         int actual = rad.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
@@ -221,7 +215,9 @@ public class RadioTest {
     public void shouldPrevNumber50 () {
         Radio rad = new Radio(50);
 
-        rad.prevNumber(0);
+        rad.setRadioStationNumber(rad.getMinNumber());
+
+        rad.prevNumber();
 
         int expected = 49;
         int actual = rad.getRadioStationNumber();
@@ -230,18 +226,17 @@ public class RadioTest {
     }
     @Test
     public void shouldPrevNumber0 () {
-        Radio rad = new Radio(0);
+        Radio rad = new Radio(1);
 
-        rad.prevNumber(0);
+        rad.setRadioStationNumber(rad.getMinNumber());
+
+        rad.prevNumber();
 
         int expected = rad.getMaxNumber();
         int actual = rad.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
     }
-
-
-
     @Test
     public void invalidLowerBoundarySoundVolume () {
         Radio rad = new Radio();
@@ -253,7 +248,6 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
-
     @Test
     public void validLowerBoundarySoundVolume () {
         Radio rad = new Radio();
@@ -277,7 +271,6 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
-
     @Test
     public void validBoundarySoundVolume () {
         Radio rad = new Radio();
@@ -289,7 +282,6 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
-
     @Test
     public void validUpperBoundarySoundVolume () {
         Radio rad = new Radio();
@@ -301,7 +293,6 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
-
     @Test
     public void invalidUpperBoundarySoundVolume () {
         Radio rad = new Radio();
@@ -313,7 +304,6 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
-
     @Test
     public void shouldNotIncreaseVolume1 () {
         Radio rad = new Radio();
@@ -327,7 +317,6 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
-
     @Test
     public void shouldIncreaseVolume1 () {
         Radio rad = new Radio();
@@ -341,7 +330,6 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
-
     @Test
     public void shouldNotDecreaseVolume1 () {
         Radio rad = new Radio();
@@ -355,7 +343,6 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
-
     @Test
     public void shouldDecreaseVolume1 () {
         Radio rad = new Radio();
