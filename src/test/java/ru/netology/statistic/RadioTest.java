@@ -1,25 +1,36 @@
 package ru.netology.statistic;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class RadioTest {
 
-
-
     @Test
-    public void ValidLowerBoundaryRadioStationNumber () {
+    public void invalidLowerBoundaryRadioStationNumber() {
         Radio rad = new Radio();
 
-        rad.setRadioStationNumber(0);
+        rad.setRadioStationNumber(-1);
 
-        int expected = rad.minNumber;
+        int expected = 0;
         int actual = rad.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void shouldSetRadioStationNumber () {
+    public void ValidLowerBoundaryRadioStationNumber() {
+        Radio rad = new Radio();
+
+        rad.setRadioStationNumber(0);
+
+        int expected = rad.getMinNumber();
+        int actual = rad.getRadioStationNumber();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldSetRadioStationNumber() {
         Radio rad = new Radio();
 
         rad.setRadioStationNumber(1);
@@ -31,7 +42,7 @@ public class RadioTest {
     }
 
     @Test
-    public void validBoundaryRadioStationNumber () {
+    public void validBoundaryRadioStationNumber() {
         Radio rad = new Radio();
 
         rad.setRadioStationNumber(8);
@@ -43,7 +54,7 @@ public class RadioTest {
     }
 
     @Test
-    public void validUpperBoundaryRadioStationNumber () {
+    public void validUpperBoundaryRadioStationNumber() {
         Radio rad = new Radio();
 
         rad.setRadioStationNumber(9);
@@ -54,9 +65,32 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    public void invalidUpperBoundarySetRadioStationNumber() {
+        Radio rad = new Radio();
+
+        rad.setRadioStationNumber(10);
+
+        int expected = 0;
+        int actual = rad.getRadioStationNumber();
+
+        Assertions.assertEquals(expected, actual);
+    }
 
     @Test
-    public void validLowerBoundarySoundVolume () {
+    public void invalidLowerBoundarySoundVolume() {
+        Radio rad = new Radio();
+
+        rad.setSoundVolume(-1);
+
+        int expected = 0;
+        int actual = rad.getSoundVolume();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void validLowerBoundarySoundVolume() {
         Radio rad = new Radio();
 
         rad.setSoundVolume(0);
@@ -68,7 +102,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldSetSoundVolume () {
+    public void shouldSetSoundVolume() {
         Radio rad = new Radio();
 
         rad.setSoundVolume(1);
@@ -80,7 +114,7 @@ public class RadioTest {
     }
 
     @Test
-    public void validBoundarySoundVolume () {
+    public void validBoundarySoundVolume() {
         Radio rad = new Radio();
 
         rad.setSoundVolume(99);
@@ -92,7 +126,7 @@ public class RadioTest {
     }
 
     @Test
-    public void validUpperBoundarySoundVolume () {
+    public void validUpperBoundarySoundVolume() {
         Radio rad = new Radio();
 
         rad.setSoundVolume(100);
@@ -103,5 +137,16 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    public void invalidUpperBoundarySoundVolume() {
+        Radio rad = new Radio();
+
+        rad.setSoundVolume(111);
+
+        int expected = 0;
+        int actual = rad.getSoundVolume();
+
+        Assertions.assertEquals(expected, actual);
+    }
 
 }
